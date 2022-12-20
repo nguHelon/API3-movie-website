@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #292929;
+}
+
+.movie-intro {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 50px;
+  background-image: url("images/justiceL.jpg");
+  background-position: 70% 17%;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.movie-intro .movie-intro-info {
+  width: 100%;
+  height: auto;
+  padding: 0 0px 50px 100px;
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.795),
+    rgb(0, 0, 0)
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.movie-intro-info h1 {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 25px;
+}
+
+.movie-intro-info .more-info {
+  width: 400px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-intro-info .more-info p {
+  color: rgb(214, 211, 211);
+}
+
+.movie-intro-info .more-info p i {
+  color: orange;
+}
+
+.movie-intro-info .buttons button {
+  padding: 10px 15px;
+  border-radius: 60px;
+  outline: none;
+  border: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.movie-intro-info .buttons .details-btn {
+  background-color: transparent;
+  border: 2px solid gray;
+  margin-left: 20px;
+}
+
+.movie-search {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-search .movie-list-div {
+  position: relative;
+  width: 450px;
+  height: auto;
+}
+
+.movie-search .movie-list-div input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 60px;
+  background-color: #171717;
+  color: white;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.movie-list-div .movies-list {
+  position: absolute;
+  top: 103%;
+  right: 10px;
+  width: 95%;
+  max-height: 500px;
+  border-radius: 10px;
+  background-color: #1d1d1d;
+  overflow-y: scroll;
+  display: none;
+}
+
+.movies-list .movie {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  padding: 36px 10px;
+}
+
+.movies-list .movie:last-child {
+  border-bottom: none;
+}
+
+.movies-list .movie .img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.movies-list .movie .img img {
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.movies-list .movie .info h3 {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.movies-list .movie .info p {
+  font-weight: bold;
+  color: gray;
+}
+
+.random-movies-list {
+  width: 100%;
+  height: auto;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.random-movies-list .random-movie {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #171717;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.random-movies-list .random-movie .img {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.random-movies-list .random-movie .img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.random-movies-list .random-movie h2 {
+  font-family: Poppins;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.random-movies-list .random-movie p {
+  color: gray;
+  font-family: Poppins;
+  margin-bottom: 10px;
+}
+
+.random-movies-list .random-movie button {
+  outline: none;
+  border: none;
+  padding: 10px 18px;
+  background-color: orange;
+  color: black;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.movie-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1d1d1d;
+  width: 1000px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.movie-details .img {
+  max-width: 300px;
+  height: 300px;
+  border: 4px solid white;
+}
+
+.movie-details .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-info {
+  text-align: center;
+  color: #fff;
+  padding-top: 3rem;
+}
+
+.movie-title {
+  font-size: 2rem;
+  color: orange;
+}
+
+.movie-misc-info {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.movie-info .year {
+  font-weight: 500;
+}
+
+.movie-info .rated {
+  background-color: orange;
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.movie-info .released {
+  font-size: 0.9rem;
+  opacity: 1rem 0;
+}
+
+.movie-info .writer {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.movie-info .genre {
+  background-color: #292929;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.movie-info .plot {
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.movie-info .language {
+  color: orange;
+  font-style: italic;
+}
+
+.movie-info .awards {
+  font-weight: 400;
+  font-size: 0.9🎗;
+}
+
+.movie-info .awards i {
+  color: orange;
+  margin: 1rem 0.7rem 0 0;
+}
+
+.movie-details > i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  padding: 7px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
