@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.movie-intro-info .buttons .main-details-btn {
+.movie-intro-info .buttons .details-btn {
   background-color: transparent;
   border: 2px solid gray;
   margin-left: 20px;

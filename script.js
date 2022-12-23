@@ -110,19 +110,20 @@ function introMovies() {
                     <p><i class="fa-solid fa-video"></i> ${data.Genre}</p>
                 </div>
                 <div class="buttons">
-                    <a href="">
+                    <a href="https://github.com/nguHelon">
                         <button>view Github</button>
                     </a>
-                    <button class="main-details-btn">View Details</button>
+                    <button class="details-btn">View Details</button>
                 </div>
             </div>
         `;
 
         movies.push(contents);
     })
+    loadMovieDetails();
     setInterval(() => {
         showIntroMovies(movies);
-    }, 1000)
+    }, 5000)
 }
 
 
